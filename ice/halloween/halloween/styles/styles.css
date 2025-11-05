@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: repeating-linear-gradient(
+    10deg,
+    black 0%,
+    rgb(173, 0, 0) 10%,
+    black 20%,
+    rgb(173, 0, 0) 30%,
+    black,
+    rgb(173, 0, 0) 50%,
+    black 60%,
+    rgb(173, 0, 0) 70%,
+    black 80%,
+    rgb(173, 0, 0) 90%,
+    black 100%
+  );
+
+  background-size: 100% 200%;
+  animation: slideDown 60s linear infinite;
+  position: relative;
+}
+
+@keyframes slideDown {
+    from {
+        background-position: 0 0;
+    }
+    
+    to {
+        background-position: 0, 100%;
+    }
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    animation:brokenLight 4s infinite;
+}
+
+@keyframes brokenLight {
+  0%, 10%   { opacity: 0; }     /* light on */
+  11%       { opacity: 0.8; }   /* quick flicker */
+  12%, 20%  { opacity: 0; }
+  21%       { opacity: 0.6; }   /* another flash */
+  22%, 50%  { opacity: 0; }
+  51%       { opacity: 1; }     /* blackout */
+  52%       { opacity: 0; }     /* instant back on */
+  70%       { opacity: 0.5; }   /* light buzz flicker */
+  71%, 100% { opacity: 0; }
+}
+
+header {
+    box-shadow: 2px 4px 10px
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+li {
+    background: linear-gradient(150deg, orange, black);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: rgba(231, 189, 189, 0.875);
+}
+
+h1 {
+    display: inline-block;
+    color: #fff;
+    text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #ff3300,
+    0 0 40px #ff3300;
+    animation:
+    flickerGlow 3s infinite,
+    flickerShake 5s infinite;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/* Glow flicker animation */
+@keyframes flickerGlow {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 20px #ff3300,
+      0 0 40px #ff3300;
+    }
+    20%, 24%, 55% {
+    opacity: 0.3;
+    text-shadow: none;
+    }
+}
+
+/* Occasional violent shake */
+@keyframes flickerShake {
+    0%, 90%, 100% {
+    transform: none;
+    }
+    92% {
+    transform: translate(-2px, -1px) rotate(-1deg);
+    }
+    94% {
+    transform: translate(3px, 2px) rotate(1deg);
+    }
+    96% {
+    transform: translate(-3px, 1px) rotate(-1deg);
+    }
+    98% {
+    transform: translate(2px, -2px) rotate(1deg);
+    }
+}
+
+img {
+    display: block;
+    margin: auto;
+    filter: brightness(50%) sepia(100%) saturate(400%) hue-rotate(-15deg);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+h2 {
+    text-shadow: 0 0 5px red;
+    display: inline-block;
+    text-align: center;
+    margin: 40px auto;
+    animation: slowSpin 50s linear infinite, glowPulse 5s ease-in-out infinite;
+}
+
+@keyframes slowSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {text-shadow: 0 0 5px red;}
+    50% {text-shadow: 0 0 20px orange;}
+}
+
+p {
+    text-shadow: 0 0 5px red;
+    animation: flickerGlow 1s infinite;
+}

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Rakkas&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p, a, td {
+    font-family: Londrina Solid, Verdana, Geneva, Tahoma, sans-serif;
+    color: #DC602E;
+}
+
+h1, h2, th, label {
+    font-family: Rakkas, Garamond, serif;
+    color: #0d25e2;
+}
+
+
+nav {
+    background-color: #009FFD;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    
+}
+
+nav img {
+    border-radius: 50%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F1F2EE;
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    background: #F1F2EE;
+    color: #009FFD;
+}
+
+body {
+    background-color: #F1F2EE;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+.family_img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+}
+
+.about_family {
+    text-align: center;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid #009FFD;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th, td {
+    padding: 10px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 20px;
+    list-style-type: none;
+    padding: 10px;
+    gap: 20px;
+}
+
+ul p {
+    text-align: left;
+}
+
+form {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1em;
+}
+
+form input {
+    width: 30%;
+}
+
+footer {
+    background: #009FFD;
+    display: grid;
+    grid-template-columns: 50px 1fr 4fr;
+    grid-template-rows: 50px 1fr;
+    align-items:baseline;
+}
+
+footer p {
+    color: #F1F2EE;
+}
+
+footer img {
+    border-radius: 50%;
+}
+
+.copyright {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 1em;
+}
+
+.footer-logo {
+    max-height: 100%;
+    width: auto;
+}
