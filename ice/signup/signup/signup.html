@@ -14,6 +14,104 @@
         body {
             background: rgb(120, 96, 64);
         }
+
+        #formContainer {
+            width: 25%;
+            text-align: center;
+            border: 8px solid #0d2e7c;
+            margin: auto;
+            background: white;
+            border-radius: 25px;
+            margin-top: 1em;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: top; /* keeps top half visible */
+            position: relative;
+            top: 0;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+        }
+
+        header {
+            position: relative;
+            height: 160px;
+            overflow: hidden;
+        }
+
+        header h1 {
+            position: absolute;
+            top: 45%;
+            left: 30%;
+            color: white;
+            font-size: 2em;
+            text-shadow: 2px 2px 3px black;
+        }
+        header p {
+            position: absolute;
+            top: 70%;
+            left: 28%;
+            color: white;
+            font-size: 1.75em;
+            text-shadow: 2px 2px 2px black;
+        }
+        header button {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        h3 {
+            font-size: 1em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        #myForm {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 1em;
+            row-gap: 1em;
+            text-align: left;
+        }
+
+        .newsletter {
+            grid-column: 1/3;
+            text-align: center;
+        }
+
+        .conditions {
+            grid-column: 1/3;
+            text-align: center;
+        }
+
+        .submit {
+            grid-column: 1/3;
+            text-align: center;
+        }
+
+        #scriptures {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 3px;
+        }
+
+        #scriptures img {
+            height: auto;
+            width: 100%;
+            display: block;
+        }
+
+        #new_testament {
+            border-bottom-left-radius: 15px;
+        }
+
+        #pearl_of_great_price {
+            border-bottom-right-radius: 15px;
+        }
     </style>
 
 
@@ -23,9 +121,14 @@
 
 <body>
     <div id="formContainer">
+        <header>
+            <img src="images/jesus_feeds_5000.jpeg" alt="Jesus Feeds 5000">
+            <button type="button" id="closeBtn">X</button>
+            <h1>Daily Feed</h1>
+            <p>Scripture a Day</p>
+        </header>
         <h3>Sign Up for Daily Scripture Feed</h3>
         <form id="myForm">
-            <button type="button" id="closeBtn">X</button>
             <label for="username">User Name:</label>
             <input type="text" id="username" name="username" required>
 
@@ -43,20 +146,27 @@
                 <label for="female">Female</label>
             </div>
 
-            <section>
+            <section class="newsletter">
                 <input type="checkbox" id="newsletter" name="newsletter">
                 <label for="newsletter">Subscribe to newsletter</label>
             </section>
 
-            <section>
+            <section class="conditions">
                 <input type="checkbox" id="conditions" name="conditions" required>
                 <label for="conditions">I acknowledge the terms and conditions</label>
             </section>
 
-            <section>
+            <section class="submit">
                 <button type="submit">Submit</button>
             </section>
         </form>
+        <footer id="scriptures">
+            <img src="images/old_testament.webp" alt="Old Testament" id="new_testament">
+            <img src="images/new_testament.webp" alt="New Testament">
+            <img src="images/book_of_mormon.webp" alt="Book of Mormon">
+            <img src="images/doctrine_and_covenants.webp" alt="Doctrine and Covenants">
+            <img src="images/pearl_of_great_price.webp" alt="Pearl of Great Price" id="pearl_of_great_price">
+        </footer>
     </div>
 
     <div id="output"></div>
