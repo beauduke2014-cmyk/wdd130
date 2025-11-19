@@ -171,3 +171,124 @@ footer img {
     max-height: 100%;
     width: auto;
 }
+
+/* ---------------------------------------
+   MOBILE RESPONSIVE STYLES
+   --------------------------------------- */
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 1.2em;
+    }
+
+    nav img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+
+    /* HEADER TEXT */
+    h1 {
+        font-size: 2em;
+        margin: 20px;
+    }
+
+    h4 {
+        font-size: 1.4em;
+        margin: 20px;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+
+    /* PROJECT GRID (auto-fit helps already, but tighten it up) */
+    .projects {
+        grid-template-columns: 1fr; /* force one per row on mobile */
+        padding: 5px;
+        gap: 20px;
+    }
+
+    .projects img {
+        height: 180px;
+    }
+
+
+    /* FAMILY IMAGE */
+    .family_img {
+        width: 90%; /* larger on small screens */
+    }
+
+
+    /* LISTS */
+    ul {
+        grid-template-columns: 1fr 1fr; /* from 4 columns → 2 */
+        margin: 10px;
+        gap: 10px;
+    }
+
+
+    /* FORMS */
+    form input {
+        width: 80%; /* full-width inputs on mobile */
+    }
+
+
+    /* TABLES (prevent overflow) */
+    table {
+        width: 95%;
+        font-size: 0.9em;
+    }
+
+
+    /* FOOTER */
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .email,
+    .copyright {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .footer-logo {
+        max-width: 80px;
+        margin: 0 auto 10px auto;
+    }
+}
+
+
+/* Even smaller phones (max 480px) */
+@media (max-width: 480px) {
+
+    nav a {
+        font-size: 1em;
+    }
+
+    ul {
+        grid-template-columns: 1fr; /* single column on tiny screens */
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+}
