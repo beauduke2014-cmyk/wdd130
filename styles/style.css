@@ -58,7 +58,7 @@ h4 {
     margin: 50px;
 }
 
-p {
+p, a {
     font-size: 1.5em;
 }
 
@@ -117,6 +117,16 @@ th, td {
     padding: 10px;
 }
 
+.project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-box img {
+    display: block;
+}
+
 ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -126,8 +136,14 @@ ul {
     gap: 20px;
 }
 
-ul p {
+ul a {
     text-align: left;
+    text-decoration:none;
+}
+
+ul a:hover {
+    background-color: #DC602E;
+    color: #F1F2EE
 }
 
 form {
