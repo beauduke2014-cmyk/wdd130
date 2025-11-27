@@ -35,7 +35,7 @@ nav a {
     text-decoration: none;
     color: #F1F2EE;
     margin: 10px;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 nav a:hover {
@@ -59,7 +59,7 @@ h4 {
 }
 
 p, a {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .projects {
@@ -103,7 +103,7 @@ p, a {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
 }
 
@@ -115,6 +115,7 @@ table, th, td {
 
 th, td {
     padding: 10px;
+    font-size: 1.5em;
 }
 
 .project-box {
