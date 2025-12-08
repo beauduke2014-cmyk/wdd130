@@ -8,6 +8,21 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #DC602E;
+    color: #F1F2EE
+}
+
+.client, .lead, .junior, .general {
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
 p, a, h4, td {
     font-family: Londrina Solid, Verdana, Geneva, Tahoma, sans-serif;
     color: #DC602E;
